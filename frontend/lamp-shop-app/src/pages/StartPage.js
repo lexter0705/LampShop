@@ -6,12 +6,16 @@ function StartPage() {
     return(
         <main>
           <div className="StartBox">
-            <img src={LampLogo}></img>
+            <img className="LogoImg" src={LampLogo}></img><br/>
             <Link path="/Login">
-              ВХОД
+              <div  className="LoginButton">
+                ВХОД
+              </div>
             </Link><br/>
             <Link path="/Registration">
-              РЕГИСТРАЦИЯ
+              <div className="RegistrationButton">
+                РЕГИСТРАЦИЯ
+              </div>
             </Link>
           </div>
         </main>
