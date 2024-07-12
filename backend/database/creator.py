@@ -11,12 +11,11 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 
 class Base(DeclarativeBase):
-    pass
+    id = Column(Integer, primary_key=True)
 
 
 class Users(Base):
     __tablename__ = 'users'
-    id = Column(Integer, primary_key=True)
     login = Column(String, nullable=False)
     password = Column(String, nullable=False)
     sessions = relationship("Sessions", cascade='save-update, merge, delete')
@@ -25,7 +24,6 @@ class Users(Base):
 
 class Products(Base):
     __tablename__ = 'products'
-    id = Column(Integer, primary_key=True)
     name = Column(String, nullable=False)
     discription = Column(String, nullable=False)
     price = Column(Integer, nullable=False)
@@ -35,17 +33,16 @@ class Products(Base):
 
 class Sessions(Base):
     __tablename__ = 'session'
-    id = Column(Integer, primary_key=True)
     user_id = mapped_column(Integer, ForeignKey("Users.id"))
     ip_address = Column(String)
 
 
 class ProductsCard(Base):
     __tablename__ = 'products_card'
-    id = Column(Integer, primary_key=True)
     user_id = mapped_column(Integer, ForeignKey("Users.id"))
     product_id = mapped_column(Integer, ForeignKey("Products.id"))
     count = Column(Integer)
+    image_src = Column(String)
 
 
 if __name__ == "__main__":
