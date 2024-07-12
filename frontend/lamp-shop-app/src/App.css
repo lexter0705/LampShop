@@ -1,23 +1,78 @@
 body {
   background-image: url(./local/images/backgroundLamp.svg);
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
 }
+
+a {
+  text-decoration: none;
+}
+
 
 .StartBox {
   background-color: white;
-  width: 20%;
-  height: 20%;
   text-align: center;
   position: absolute;
   top: 50%;
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+  border-radius: 3vh;
+  padding: 3%;
+  padding-top: 1%;
+  padding-bottom: 2%;
 }
 
 .LogoImg {
-  background-image: url(./local/images/LampLogo.svg);
-  width: 100%;
+  width: 70%;
   height: 50%;
   object-fit: fill;
   object-position: 50% 50%;
+  margin: 5%;
+}
+
+.LoginButton {
+  padding-block: 2%;
+  text-align: center;
+  align-items: center;
+  background-color: #2F2F2F;
+  color: white;
+  border-radius: 1vh;
+  font-size: 20pt;
+}
+
+.RegistrationButton {
+  padding-block: 2%;
+  text-align: center;
+  align-items: center;
+  background-color: #2F2F2F;
+  color: white;
+  border-radius: 1vh;
+  font-size: 20pt;
+}
+
+.LoginInput {
+  font-size: 20pt;
+  margin-bottom: 2vh;
+  border-color: #ffffff;
+  border: 10pt;
+}
+
+.PasswordInput {
+  font-size: 20pt;
+  margin-bottom: 2vh;
+  border-color: #ffffff;
+  border: 10pt;
+}
+
+.SubmitButon {
+  padding-block: 2%;
+  width: 100%;
+  font-size: 20pt;
+  border-radius: 1vh;
+  background-color: #2F2F2F;
+  color: white;
 }
